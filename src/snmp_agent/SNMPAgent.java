@@ -35,7 +35,7 @@ public class SNMPAgent extends BaseAgent {
 
     /**
      *
-     * @param address
+     * @param address The address
      * @throws IOException
      */
     public SNMPAgent(String address) throws IOException {
@@ -45,10 +45,10 @@ public class SNMPAgent extends BaseAgent {
          * CommandProcessor for processing SNMP requests. Parameters:
          * "bootCounterFile" - a file with serialized boot-counter information
          * (read/write). If the file does not exist it is created on shutdown of
-         * the agent. "configFile" - a file with serialized configuration
-         * information (read/write). If the file does not exist it is created on
-         * shutdown of the agent. "commandProcessor" - the CommandProcessor
-         * instance that handles the SNMP requests.
+         * the agent.
+         * "configFile" - a file with serialized configuration information (read/write).
+         * If the file does not exist it is created on shutdown of the agent.
+         * "commandProcessor" - the CommandProcessor instance that handles the SNMP requests.
          */
         super(new File("conf.agent"), new File("bootCounter.agent"),
                 new CommandProcessor(
