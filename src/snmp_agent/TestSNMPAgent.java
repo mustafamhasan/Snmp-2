@@ -47,8 +47,11 @@ public class TestSNMPAgent {
         // Setup the client to use our newly started agent
         client = new SNMPManager("udp:127.0.0.1/2001");
         client.start();
+
         // Get back Value which is set
+        //.1.3.6.1.2.1.1.1.0"
         System.out.println(client.getAsString(sysDescr));
+        //System.out.println(client.getBulk(new OID(".1.3.6.1.2.1.1.1.0")).getResponse().get(0).getVariable().toString());
     }
 
 }
