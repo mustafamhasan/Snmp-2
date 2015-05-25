@@ -42,7 +42,7 @@ public class TestSNMPAgent {
         // Register a system description, use one from you product environment
         // to test with
         agent.registerManagedObject(MOCreator.createReadOnly(sysDescr,
-                "This Description is set By ShivaSoft"));
+                "This Description"));
 
         // Setup the client to use our newly started agent
         client = new SNMPManager("udp:127.0.0.1/2001");
